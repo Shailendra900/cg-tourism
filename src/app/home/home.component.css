@@ -1,8 +1,84 @@
+.tour-images{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-.video {
-    margin: 20%;
-    width: 10%;
-    height: 10%;
-    object-fit: cover; /* Ensures the video covers the entire screen */
-    z-index: -1; /* Sends the video behind other content */
-  }
+.raipur {
+  background-image: url("https://chhattisgarhtourism.co.in/destinations/raipur.jpg");
+}
+
+.gangrel {
+  background-image: url("https://chhattisgarhtourism.co.in/photo_gallery/gangrel_dam/01.jpg");
+}
+
+.sirpur {
+  background-image: url("https://chhattisgarhtourism.co.in/destinations/laxman_temple.jpg");
+}
+
+.rajim {
+  background-image: url("https://chhattisgarhtourism.co.in/destinations/rajim_temple.jpg");
+}
+.tour-images .raipur,.gangrel,.rajim,.sirpur{
+  margin: 0px 10px;
+  background-size: cover;  /* Ensures the image covers the whole element */
+  height: 200px;
+  width: 300px;
+}  
+
+.tour-images h5{
+  background-color: rgb(35, 214, 89);
+  width: fit-content;
+  border-radius: 5%;
+}
+.view-button{
+  margin-top: 3%;
+}
+.numbers-of {
+  height: 350px;
+  width: 100vw;
+  margin: 3% 0;
+  background-size: cover;  /* Ensures the image covers the whole element */
+  background-image: url("https://chhattisgarhtourism.co.in/destinations/rajim_temple.jpg");
+  display: flex;
+  justify-content: center;
+  position: relative;  /* Ensure overlay is positioned correctly */
+}
+
+.numbers-of::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 60% opacity */
+  z-index: 1;  /* Overlay is placed above the image */
+}
+
+.numbers-of div{
+  color: white;
+  text-align: center;
+  margin: 10%;
+  border-radius: 10%;
+  height: fit-content;
+  width: fit-content;
+}
+.about-chh{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 5%;
+}
+
+.chh-img {
+  background-image: url("https://chhattisgarhtourism.co.in/destinations/raipur.jpg");
+  background-size: cover;  /* Ensures the image covers the whole element */
+  height: 300px;
+  width:500px;
+}
+.chh-img h3{
+  background-color: aliceblue;
+  height: fit-content;
+  width: fit-content;
+}
