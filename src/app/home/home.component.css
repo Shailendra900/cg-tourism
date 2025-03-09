@@ -1,48 +1,85 @@
-.tour-images{
+/* General Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Tour Images Section */
+.tour-images {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
 }
 
-.raipur {
+.tour-images div {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tour-images .raipur {
   background-image: url("https://chhattisgarhtourism.co.in/destinations/raipur.jpg");
 }
-
-.gangrel {
+.tour-images .gangrel {
   background-image: url("https://chhattisgarhtourism.co.in/photo_gallery/gangrel_dam/01.jpg");
 }
-
-.sirpur {
+.tour-images .sirpur {
   background-image: url("https://chhattisgarhtourism.co.in/destinations/laxman_temple.jpg");
 }
-
-.rajim {
+.tour-images .rajim {
   background-image: url("https://chhattisgarhtourism.co.in/destinations/rajim_temple.jpg");
 }
-.tour-images .raipur,.gangrel,.rajim,.sirpur{
-  margin: 0px 10px;
-  background-size: cover;  /* Ensures the image covers the whole element */
-  height: 200px;
-  width: 300px;
-}  
 
-.tour-images h5{
+.tour-images div:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tour-images h5 {
   background-color: rgb(35, 214, 89);
   width: fit-content;
   border-radius: 5%;
+  margin: 10px;
+  padding: 5px 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
 }
-.view-button{
-  margin-top: 3%;
+
+/* View Button */
+.view-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
+
+.view-button:hover {
+  background-color: #c9cfca;
+}
+
+/* Numbers Section */
 .numbers-of {
   height: 350px;
   width: 100vw;
-  margin: 3% 0;
-  background-size: cover;  /* Ensures the image covers the whole element */
   background-image: url("https://chhattisgarhtourism.co.in/destinations/rajim_temple.jpg");
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
-  position: relative;  /* Ensure overlay is positioned correctly */
+  align-items: center;
+  position: relative;
+  margin: 3% 0;
 }
 
 .numbers-of::before {
@@ -52,33 +89,170 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 60% opacity */
-  z-index: 1;  /* Overlay is placed above the image */
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay */
+  z-index: 1;
 }
 
-.numbers-of div{
+.numbers-of div {
   color: white;
   text-align: center;
   margin: 10%;
   border-radius: 10%;
   height: fit-content;
   width: fit-content;
+  z-index: 2;
+  font-size: 1.5em;
+  font-weight: bold;
+  animation: fadeIn 1s ease-out;
 }
-.about-chh{
+
+/* About Section */
+.about-chh {
   display: flex;
   justify-content: center;
   flex-direction: row;
   margin: 0 5%;
+  gap: 20px;
 }
 
 .chh-img {
   background-image: url("https://chhattisgarhtourism.co.in/destinations/raipur.jpg");
-  background-size: cover;  /* Ensures the image covers the whole element */
+  background-size: cover;
   height: 300px;
-  width:500px;
+  width: 500px;
+  border-radius: 10px;
+  position: relative;
 }
-.chh-img h3{
-  background-color: aliceblue;
-  height: fit-content;
-  width: fit-content;
+
+.chh-img h3 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #333;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  animation: slideUp 1s ease-out;
+}
+
+/* Hotels Section */
+.hotels {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.first {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 40vw;
+  background-color: antiquewhite;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.h-img {
+  margin: 20px;
+  height: auto;
+}
+
+/* Paragraph Text */
+.para p {
+  margin: 10% 1%;
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.para p:hover {
+  color: #35d659;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .tour-images div {
+    width: 100%;
+    height: 250px;
+  }
+
+  .about-chh {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .details-in{
+    width: 50%;
+  }
+  .numbers-of {
+    height: 20vh;
+    }
+  .chh-img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .first {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+  }
+
+  .para p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .tour-images div {
+    width: 100%;
+    height: 200px;
+  }
+
+  .view-button {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .about-chh {
+    flex-direction: column;
+  }
+
+  .chh-img {
+    width: 100%;
+    height: 250px;
+  }
+  
 }
