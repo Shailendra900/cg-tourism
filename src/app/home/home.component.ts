@@ -5,7 +5,7 @@ import { RaipurComponent } from '../raipur/raipur.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink ,],
+  imports: [RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

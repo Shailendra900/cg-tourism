@@ -9,5 +9,5 @@ import {MatTabsModule} from '@angular/material/tabs';
   styleUrl: './raipur.component.css'
 })
 export class RaipurComponent {
-
+ 
 }
