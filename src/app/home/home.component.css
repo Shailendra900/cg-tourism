@@ -71,7 +71,8 @@ body {
 /* Numbers Section */
 .numbers-of {
   height: 350px;
-  width: 100vw;
+  width: 99vw;
+  margin: 0 5%;
   background-image: url("https://chhattisgarhtourism.co.in/destinations/rajim_temple.jpg");
   background-size: cover;
   background-position: center;
