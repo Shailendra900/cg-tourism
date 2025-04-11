@@ -14,6 +14,13 @@ body {
   gap: 15px;
   padding: 20px;
 }
+.tour-images a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30%;
+  text-decoration: none;
+}
 
 .tour-images div {
   background-size: cover;

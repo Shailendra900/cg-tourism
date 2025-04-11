@@ -1,32 +1,55 @@
-<div class="nav-or-list">
-  <div class="list-of-palce">
-    <div class="place-list">
-      <ol>
-        <li>Raipur</li>
-        <li>gangrel</li>
-        <li>sirpur</li>
-        <li>Rajim</li>
-        <li>Barnawapara</li>
-        <li>Champaranya</li>
-        <li>Chitrakote </li>
-        <li>Tirathgarh </li>
-        <li>Bhoramdeo </li>
-        <li>Dongargarh</li>
-        <li>Ratanpur</li>
-        <li>Tala</li>
-        <li>Achanakmar</li>
-        <li>Girodhpuri </li>
-        <li>Mainpat</li>
-        <li>Bastar</li>
-        <li>Madku Dweep</li>
-        <li>Kanger Valley</li>
-      </ol>
-    </div>
+<div class="page-container">
+  <!-- Fixed Sidebar -->
+  <div class="sidebar">
+    <app-list></app-list>
   </div>
-  <div class="nav-for-place">
-    <div class="place-nav">
-     
 
-    </div>
+  <!-- Scrollable Content Area -->
+  <div class="content">
+    @if (allRaipur) {
+    <div class="details-section">
+      <div class="about-section">
+        <h1>{{ allRaipur[0].h1 }}</h1>
+        <h6>{{ allRaipur[0].h6 }}</h6>
+        <p>{{ allRaipur[0].p1 }}</p>
+      </div>
+
+      <div class="text-center">
+        <h2>{{ allRaipur[0].h01 }}</h2>
+      </div>
+      <div class="places-grid">
+        <div class="place-card">
+          <h6>{{ allRaipur[0].h06 }}</h6>
+          <img [src]="allRaipur[0].img06" alt="Place 1">
+          <p>{{ allRaipur[0].p2 }}</p>
+        </div>
+        <div class="place-card">
+          <h6>{{ allRaipur[0].h006 }}</h6>
+          <img [src]="allRaipur[0].img006" alt="Place 2">
+          <p>{{ allRaipur[0].p3 }}</p>
+        </div>
+        <div class="place-card">
+          <h6>{{ allRaipur[0].h0006 }}</h6>
+          <img [src]="allRaipur[0].img0006" alt="Place 3">
+          <p>{{ allRaipur[0].p4 }}</p>
+        </div>
+        <div class="place-card">
+          <h6>{{ allRaipur[0].h00006 }}</h6>
+          <img [src]="allRaipur[0].img00006" alt="Place 4">
+          <p>{{ allRaipur[0].p5 }}</p>
+        </div>
+      </div>
+
+      <div class="go-there">
+        <h2>{{ allRaipur[0].go }}</h2>
+        <p>{{ allRaipur[0].go01 }}</p>
+        <h6>{{ allRaipur[0].goh6 }}</h6>
+        <p>{{ allRaipur[0].go02 }}</p>
+        <h6>{{ allRaipur[0].hoh06 }}</h6>
+        <p>{{ allRaipur[0].go03 }}</p>
+        <h6>{{ allRaipur[0].goh006 }}</h6>
+        <p>{{ allRaipur[0].go04 }}</p>
+      </div>
+    </div>}
   </div>
 </div>

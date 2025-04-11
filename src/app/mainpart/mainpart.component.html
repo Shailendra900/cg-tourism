@@ -1,1 +1,55 @@
-<p>mainpart works!</p>
+<div class="page-container">
+    <!-- Fixed Sidebar -->
+    <div class="sidebar">
+      <app-list></app-list>
+    </div>
+  
+    <!-- Scrollable Content Area -->
+    <div class="content">
+      @if (allData) {
+      <div class="details-section">
+        <div class="about-section">
+          <h1>{{ allData[0].h1 }}</h1>
+          <h6>{{ allData[0].h6 }}</h6>
+          <p>{{ allData[0].p1 }}</p>
+        </div>
+  
+        <div class="text-center">
+          <h2>{{ allData[0].h01 }}</h2>
+        </div>
+        <div class="places-grid">
+          <div class="place-card">
+            <h6>{{ allData[0].h06 }}</h6>
+            <img [src]="allData[0].img06" alt="Place 1">
+            <p>{{ allData[0].p2 }}</p>
+          </div>
+          <div class="place-card">
+            <h6>{{ allData[0].h006 }}</h6>
+            <img [src]="allData[0].img006" alt="Place 2">
+            <p>{{ allData[0].p3 }}</p>
+          </div>
+          <div class="place-card">
+            <h6>{{ allData[0].h0006 }}</h6>
+            <img [src]="allData[0].img0006" alt="Place 3">
+            <p>{{ allData[0].p4 }}</p>
+          </div>
+          <div class="place-card">
+            <h6>{{ allData[0].h00006 }}</h6>
+            <img [src]="allData[0].img00006" alt="Place 4">
+            <p>{{ allData[0].p5 }}</p>
+          </div>
+        </div>
+  
+        <div class="go-there">
+          <h2>{{ allData[0].go }}</h2>
+          <p>{{ allData[0].go01 }}</p>
+          <h6>{{ allData[0].goh6 }}</h6>
+          <p>{{ allData[0].go02 }}</p>
+          <h6>{{ allData[0].hoh06 }}</h6>
+          <p>{{ allData[0].go03 }}</p>
+          <h6>{{ allData[0].goh006 }}</h6>
+          <p>{{ allData[0].go04 }}</p>
+        </div>
+      </div>}
+    </div>
+  </div>
